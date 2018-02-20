@@ -112,6 +112,9 @@ on boot
     chown system system /sys/class/backlight/panel0-backlight/brightness_clone
     chown system system /sys/class/drm/card0-DSI-1/doze_brightness
     chmod 0664 /sys/class/drm/card0-DSI-1/doze_brightness
+
+    chown system system /sys/kernel/hbtp/display_pwr
+
     start rmt_storage
     start rfs_access
     write /dev/cpuset/top-app/cpus 0-7
