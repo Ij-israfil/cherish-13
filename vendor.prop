@@ -180,6 +180,7 @@ sdm.debug.disable_inline_rotator=1
 sdm.debug.disable_inline_rotator_secure=1
 debug.sdm.support_writeback=0
 debug.hwui.renderer=skiagl
+debug.sf.disable_client_composition_cache=1
 
 # IMS
 persist.dbg.volte_avail_ovr=1
