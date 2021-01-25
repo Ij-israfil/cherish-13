@@ -6,3 +6,9 @@ type fingerprint_device, dev_type;
 
 # Reserve
 type vendor_reserve_partition, dev_type;
+
+# Goodix device
+type goodix_device, dev_type;
+
+# Mdmreason device
+type mdmreason_device, dev_type;
