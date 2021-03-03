@@ -221,6 +221,11 @@ telephony.lteOnCdmaDevice=1
 # RCS
 persist.rcs.supported=0
 
+# SoC
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.soc.manufacturer=Qualcomm \
+    ro.soc.model=SDM710
+
 # USB
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.vendor.usb.config.extra=none \
