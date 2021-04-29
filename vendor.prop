@@ -148,6 +148,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.display.cabl=2 \
     ro.sf.lcd_density=420 \
     vendor.display.disable_rotator_downscale=1
+    persist.camera.HAL3.enabled=1 \
+    log.tag.CHIUSECASE=ERROR \
+    persist.vendor.camera.logInfoMask=false
 
 # Display post-processing
 ro.vendor.display.ad=1
