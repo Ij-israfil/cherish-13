@@ -142,6 +142,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
    dalvik.vm.heapminfree=4m \
    dalvik.vm.heapmaxfree=16m
 
+# Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.display.enable_default_color_mode=1 \
+    ro.vendor.display.cabl=2 \
+    ro.sf.lcd_density=420 \
+    vendor.display.disable_rotator_downscale=1
+
 # Display post-processing
 ro.vendor.display.ad=1
 ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg
