@@ -52,6 +52,11 @@
 # mdmreason device
 /dev/mdmreason             u:object_r:mdmreason_device:s0
 
+# Lights
+/vendor/bin/hw/android\.hardware\.lights-service\.RMX1901        u:object_r:hal_light_default_exec:s0
+/sys/class/lcd_bias/secure_mode                                                u:object_r:sysfs_lcd_file:s0
+/sys/class/leds/wled/secure_mode                                                u:object_r:sysfs_led_file:s0
+
 # Neural Networks Hal
 /(vendor|system/vendor)/bin/hw/android\.hardware\.neuralnetworks@1\.2-service-qti                                 u:object_r:hal_neuralnetworks_default_exec:s0
 

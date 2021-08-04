@@ -228,7 +228,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.xiaomi
+    android.hardware.lights-service.RMX1901
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
