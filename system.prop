@@ -49,6 +49,9 @@ ro.surface_flinger.protected_contents=true
 # DPM
 persist.vendor.dpm.feature=1
 
+# One handed mode
+ro.support_one_handed_mode=true
+
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
 
@@ -63,6 +66,15 @@ media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 # Netflix custom property
 ro.netflix.bsp_rev=Q670-14477-1
 
+<<<<<<< HEAD
+=======
+# One handed mode
+ro.support_one_handed_mode=true
+
+# QC framework value-adds
+ro.vendor.qti.va_aosp.support=1
+
+>>>>>>> bb8da85... RMX1901: Enable one handed mode
 # RCS
 persist.rcs.supported=0
 
