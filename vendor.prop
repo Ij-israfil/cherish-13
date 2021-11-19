@@ -222,5 +222,9 @@ telephony.lteOnCdmaDevice=1
 persist.rcs.supported=0
 
 # USB
-vendor.usb.diag.func.name=diag
-vendor.usb.use_ffs_mtp=0
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.vendor.usb.config.extra=none \
+    vendor.usb.dpl.inst.name=dpl \
+    vendor.usb.rmnet.func.name=rmnet_bam \
+    vendor.usb.rmnet.inst.name=rmnet \
+    vendor.usb.rndis.func.name=rndis_bam
