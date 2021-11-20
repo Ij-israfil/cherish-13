@@ -175,6 +175,7 @@ public class TouchGestures extends PreferenceFragment implements
 
         boolean enableGestures =
                 mPrefs.getBoolean(PREF_GESTURE_ENABLE, false);
+                mScreenOffGestureSharedPreferences.getBoolean(PREF_GESTURE_ENABLE, false);
         mEnableGestures.setChecked(enableGestures);
         mEnableGestures.setOnPreferenceChangeListener(this);
 
@@ -273,6 +274,9 @@ public class TouchGestures extends PreferenceFragment implements
         SharedPreferences.Editor editor = mPrefs.edit();
 
         mPrefs.edit()
+        mScreenOffGestureSharedPreferences.edit()
+                .putBoolean(PREF_DT2W_ENABLE, true).commit();
+        mScreenOffGestureSharedPreferences.edit()
                 .putBoolean(PREF_GESTURE_ENABLE, false).commit();
 
         editor.putString(PREF_GESTURE_W,
