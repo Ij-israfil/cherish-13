@@ -66,15 +66,6 @@ media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 # Netflix custom property
 ro.netflix.bsp_rev=Q670-14477-1
 
-<<<<<<< HEAD
-=======
-# One handed mode
-ro.support_one_handed_mode=true
-
-# QC framework value-adds
-ro.vendor.qti.va_aosp.support=1
-
->>>>>>> bb8da85... RMX1901: Enable one handed mode
 # RCS
 persist.rcs.supported=0
 
@@ -94,6 +85,7 @@ persist.vendor.radio.manual_nw_rej_ct=1
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.redir_party_num=1
 persist.vendor.radio.report_codec=1
+persist.vendor.radio.add_power_save=1
 ril.subscription.types=RUIM
 ro.com.android.dataroaming=false
 ro.telephony.default_cdma_sub=0
