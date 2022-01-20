@@ -115,6 +115,9 @@ renderthread.skia.reduceopstasksplitting=true
 debug.hwui.renderer=skiavk
 debug.cpurend.vsync=false
 
+# Hearing Aid Audio Support Using Bluetooth LE
+bluetooth.profile.asha.central=true
+
 # Iorap
 iorapd.perfetto.enable=false
 persist.device_config.runtime_native_boot.iorap_readahead_enable=false
