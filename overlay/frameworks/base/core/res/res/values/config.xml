@@ -353,8 +353,8 @@
         <item>sensorRadius</item>
       -->
         <item>540</item>
-        <item>2084</item>
-        <item>98</item>
+        <item>2066</item>
+        <item>96</item>
      </integer-array>
 
      <!-- How long it takes for the HW to start illuminating after the illumination is requested. -->
@@ -400,5 +400,8 @@
          Do not read this dimen directly. Use {@link SystemBarUtils#getStatusBarHeight} instead.
          -->
     <dimen name="status_bar_height_landscape">32dp</dimen>
+
+    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveNotificationLed">false</bool>
 
 </resources>
