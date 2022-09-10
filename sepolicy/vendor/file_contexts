@@ -89,3 +89,6 @@
 
 # Sys files
 /sys/devices/platform/vendor/vendor:motor_pl(/.*)?                 u:object_r:sysfs_motor:s0
+
+# Widevine
+/(odm|vendor/odm)/bin/hw/android\.hardware\.drm@1\.3-service.widevine    u:object_r:hal_drm_widevine_exec:s0
