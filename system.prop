@@ -29,6 +29,7 @@ persist.vendor.btstack.enable.splita2dp=true
 ro.bluetooth.emb_wp_mode=true
 ro.bluetooth.wipower=true
 vendor.bluetooth.soc=cherokee
+bluetooth.device.default_name=Realme X
 
 # BPF
 ro.kernel.ebpf.supported=true
