@@ -289,6 +289,10 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
+# RealmeProximityHelper
+PRODUCT_PACKAGES += \
+    RealmeProximityHelper
+
 # RIL
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
