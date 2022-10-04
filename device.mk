@@ -388,6 +388,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.wifi.supplicant@2.1.vendor \
     WifiResCommon \
     wpa_supplicant \
+    WifiOverlay \
+    TetheringConfigOverlay \
     wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
