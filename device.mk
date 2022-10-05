@@ -4,6 +4,12 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Realme X is a product launched with pie
+$(call inherit-product, build/make/target/product/product_launched_with_p.mk)
+
+# Get non-open-source specific aspects
+$(call inherit-product-if-exists, vendor/realme/RMX1901/RMX1901-vendor.mk)
+
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
@@ -410,6 +416,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
-
-# Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/sdm710-common/sdm710-common-vendor.mk)

@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/sdm710-common
+DEVICE_PATH := device/realme/RMX1901
 
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
@@ -25,6 +25,9 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
+
+# Assertion
+TARGET_OTA_ASSERT_DEVICE := RMX1901,RMX1901CN
 
 # Audio
 AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT := true
@@ -92,7 +95,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3758096384
 BOARD_VENDORIMAGE_PARTITION_SIZE := 1610612736
 
 # Platform
-BOARD_VENDOR := xiaomi
+BOARD_VENDOR := realme
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := sdm710
 
@@ -159,4 +162,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit the proprietary files
-include vendor/xiaomi/sdm710-common/BoardConfigVendor.mk
+include vendor/realme/RMX1901/BoardConfigVendor.mk
