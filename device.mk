@@ -68,23 +68,28 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio@2.1-impl \
-    android.hardware.soundtrigger@2.1-impl
-
-PRODUCT_PACKAGES += \
+    android.hardware.soundtrigger@2.1-impl \
     audio.a2dp.default \
     audio.bluetooth.default \
     audio.primary.sdm710 \
     audio.r_submix.default \
-    audio.usb.default
-
-PRODUCT_PACKAGES += \
-    libaudioalsa \
+    audio.usb.default \
+    audio.usb.default \
+    audioadsprpcd \
+    liba2dpoffload \
+    libbatterylistener \
+    libcomprcapture \
+    libexthwplugin \
+    libhdmiedid \
+    libhfp \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
+    libsndmonitor \
+    libspkrprot \
     libtinycompress \
-    libvolumelistener \
-    tinymix
+    libtinymix \
+    libvolumelistener
 
 # Audio configs
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8350/audio
