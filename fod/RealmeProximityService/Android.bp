@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+<<<<<<< HEAD:RealmeProximityService/Android.bp
 android_app {
     name: "RealmeProximityHelper",
 
@@ -29,3 +30,14 @@ android_app {
         proguard_flags_files: ["proguard.flags"],
     },
 }
+=======
+#include <compositionengine/UdfpsExtension.h>
+
+uint32_t getUdfpsZOrder(uint32_t z, bool touched) {
+    return touched ? 1090519091 : z;
+}
+
+uint64_t getUdfpsUsageBits(uint64_t usageBits, bool) {
+    return usageBits;
+}
+>>>>>>> 3ee6cdb... RMX1921: fod->udfps:RealmeProximityService/UdfpsExtension.cpp
