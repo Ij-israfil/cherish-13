@@ -14,7 +14,11 @@
 // limitations under the License.
 
 cc_binary {
+<<<<<<< HEAD
     name: "android.hardware.sensors@2.0-service.multihal.xt",
+=======
+    name: "android.hardware.sensors@2.0-service.multihal.RMX1901",
+>>>>>>> f3d85fe... RMX1901: Nicky --> RMX1901
     stem: "android.hardware.sensors@2.0-service.multihal",
     defaults: [
         "hidl_defaults",
