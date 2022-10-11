@@ -1,31 +1,38 @@
-# Camera
-genfscon proc /qcom_flash      u:object_r:vendor_proc_flash:s0
-genfscon sysfs /class/motor    u:object_r:vendor_camera_motor_device:s0
+# Oppo display
+genfscon sysfs /kernel/oppo_display      u:object_r:sysfs_oppo_display:s0
+genfscon sysfs /devices/pnp0/00:00/rtc u:object_r:sysfs_rtc:s0
+genfscon sysfs /devices/platform/GFSH0007:00/rtc u:object_r:sysfs_rtc:s0
 
-# Charging
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/ac    u:object_r:sysfs_battery_supply:s0
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm660@0:qcom,qpnp-smb2/power_supply/ac      u:object_r:sysfs_battery_supply:s0
-genfscon sysfs /devices/platform/soc/soc:oplus,chg_intf/oplus_chg      u:object_r:sysfs_battery_supply:s0
+# Touchpanel
+genfscon proc /touchpanel              u:object_r:proc_touchpanel:s0
+
+# Oppo Project Version
+genfscon proc /oppoVersion                      u:object_r:proc_oppoversion:s0
+
+# Oppo FP
+genfscon proc /fp_id                     u:object_r:proc_oppo_fp:s0
+
+# RTC
+genfscon sysfs /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm660@0:qcom,pm660_rtc/rtc/rtc0/hctosys        u:object_r:sysfs_rtc:s0
+genfscon sysfs /sys/class/rtc/rtc0/hctosys        u:object_r:sysfs_rtc:s0
+
+# Power supply
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm660@0:qcom,qpnp-smb2/power_supply/ac   u:object_r:sysfs_batteryinfo:s0
 
 # Devinfo
 genfscon proc /devinfo        u:object_r:proc_devinfo:s0
 
-# Display
-genfscon proc /devinfo/lcd              u:object_r:vendor_proc_display:s0
-genfscon proc /touchpanel               u:object_r:vendor_proc_display:s0
-genfscon sysfs /kernel/oplus_display    u:object_r:sysfs_graphics:s0
-genfscon sysfs /kernel/oppo_display     u:object_r:sysfs_graphics:s0
+# FPS info
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps        u:object_r:sysfs_graphics:s0
 
-# Engineering
-genfscon proc /oplus_rf    u:object_r:vendor_proc_engineer:s0
+genfscon sysfs /devices/platform/soc/62400000.qcom,lpass/subsys[0-9]/restart_level        u:object_r:sysfs_restart:s0
+genfscon sysfs /bus/msm_subsys/devices/subsys[0-9]/restart_level        u:object_r:sysfs_restart:s0
 
-# Fingerprint
-genfscon proc /fp_id    u:object_r:vendor_proc_fingerprint:s0
+# Realmeparts
+genfscon sysfs /kernel/sound_control/headphone_gain u:object_r:sysfs_hgain:s0
+genfscon sysfs /kernel/sound_control/mic_gain u:object_r:sysfs_mgain:s0
 
-# Sharedmem
-genfscon sysfs /sys/devices/platform/soc/0.qcom,oembackup_sharedmem/uio		u:object_r:sysfs_uio_file:s0
-
-# Versioning
-genfscon proc /oplusVersion    u:object_r:vendor_proc_oplus_version:s0
-genfscon proc /oppoVersion     u:object_r:vendor_proc_oplus_version:s0
-
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm660@0:qcom,usb-pdphy@1700/extcon          u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/soc/88e0000.qcom,msm-eud/extcon          u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm660@0:qcom,qpnp-smb2/extcon        u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon			u:object_r:sysfs_extcon:s0

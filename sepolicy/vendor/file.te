@@ -1,38 +1,31 @@
-# Audio
-type persist_audio_file, file_type , vendor_persist_type;
-type proc_audio_file, file_type, data_file_type, core_data_file_type;
+# Oppo display
+type sysfs_oppo_display, fs_type, sysfs_type;
+
+# Touchpanel
+type proc_touchpanel, fs_type, proc_type;
+
+# Oppo Project version
+type proc_oppoversion, fs_type, proc_type;
+
+# Oppo FP
+type proc_oppo_fp, fs_type, proc_type;
 
 # Camera
-type vendor_persist_camera_file, file_type;
-type vendor_proc_flash, fs_type, proc_type;
-type vendor_camera_motor_device, fs_type, file_type;
+type persist_camera_file, file_type;
 
 # Devinfo
 type proc_devinfo, fs_type, proc_type;
 
-# Display
-type vendor_proc_display, fs_type, proc_type;
-
-# Engineering
-type vendor_persist_engineer_file, file_type;
-type vendor_proc_engineer, fs_type, proc_type;
-
-# Fingerprint
-type vendor_proc_fingerprint, fs_type, proc_type;
-type proc_oppo_fp, fs_type, proc_type;
+# Audio
+type persist_audio_file, file_type , vendor_persist_type;
+type proc_audio_file, file_type, data_file_type, core_data_file_type;
 
 # FPS Info
 type sysfs_fps, sysfs_type, fs_type;
 
-# GCam
-type public_adsprpcd_file, file_type;
-
 # LED/LCD
 type sysfs_led_file, sysfs_type, fs_type;
 type sysfs_lcd_file, sysfs_type, fs_type;
-
-# Oppo Project version
-type proc_oppoversion, fs_type, proc_type;
 
 # Power stats
 type sysfs_iio, sysfs_type, fs_type;
@@ -40,8 +33,21 @@ type sysfs_restart, sysfs_type, fs_type;
 
 type vulkan_hal, file_type;
 
-# Touchpanel
-type proc_touchpanel, fs_type, proc_type;
+# GCam
+type public_adsprpcd_file, file_type;
 
-# Versioning
-type vendor_proc_oplus_version, fs_type, proc_type;
+# Smart Charging
+type sysfs_scharge, sysfs_type, fs_type;
+
+# Kcal
+type proc_kcal_file, sysfs_type, fs_type;
+
+# Audio control
+type sysfs_hgain, sysfs_type, fs_type;
+type sysfs_mgain, sysfs_type, fs_type;
+
+# Vibrator
+type proc_vibration_file, sysfs_type, fs_type;
+
+# I/O Scheduler
+type sysfs_io_sched_tuneable, fs_type, sysfs_type;

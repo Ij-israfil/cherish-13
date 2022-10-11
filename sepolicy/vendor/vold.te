@@ -1,1 +1,2 @@
-allow vold sysfs_mmc_host:file { write };
+allow vold mnt_vendor_file:dir { open read ioctl };
+allow vold sysfs_mmc_host:file w_file_perms;
