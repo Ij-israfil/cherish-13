@@ -30,7 +30,15 @@ ro.bluetooth.emb_wp_mode=true
 ro.bluetooth.wipower=true
 vendor.bluetooth.soc=cherokee
 
+# BPF
+ro.kernel.ebpf.supported=true
+
 # Camera
+ro.camera.hfr.enable=0
+persist.camera.HAL3.enabled=1
+ro.camera.relight.enable=0
+ro.camera.attr.detect.enable=1
+ro.camera.notify_nfc=1
 camera.disable_zsl_mode=true
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 
@@ -40,15 +48,45 @@ ro.charger.enable_suspend=true
 # Data modules
 persist.vendor.data.mode=concurrent
 ro.vendor.use_data_netmgrd=true
+persist.data.df.dev_name=rmnet_usb0
+persist.data.df.agg.dl_pkt=10 
+persist.data.df.agg.dl_size=4096 
+persist.data.df.dl_mode=5 
+persist.data.df.iwlan_mux=9 
+persist.data.df.mux_count=8 
+persist.data.df.ul_mode=5 
+persist.data.netmgrd.qos.enable=true 
+persist.data.profile_update=true 
+persist.data.wda.enable=true 
+persist.rmnet.data.enable=true
 
 # Device model
 ro.product.model=RMX1901
 
-# Display
-ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
-ro.surface_flinger.max_frame_buffer_acquired_buffers=3
-ro.surface_flinger.max_virtual_display_dimension=4096
-ro.surface_flinger.protected_contents=true
+# Dex
+dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.systemuicompilerfilter=speed
+ro.vendor.qti.am.reschedule_service=true
+ro.sys.fw.dex2oat_thread_count=8
+dalvik.vm.boot-dex2oat-threads=8
+dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.dex2oat-filter=quicken
+dalvik.vm.dex2oat-threads=8
+dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.image-dex2oat-threads=8
+
+# Display - oppo
+persist.sys.enable.rc=1
+ro.display.rc.size=108,108,111,111
+ro.lcd.backlight.samsung_tenbit=10,517,103,303,355,457,563,676,805,883,1023
+ro.lcd.backlight.config_dsjm=11,958,13,334,517,794,1055,1325,1617,1770,1989,2047
+ro.vendor.display.backlightapp=1
+ro.display.underscreenfingerprint=1
+ro.display.underscreen.lightsensor.support=1
+ro.lcd.display.screen.underlightsensor.region=624,28,672,76
+ro.display.underscreen.lightsensor.screenshot.period=50
+persist.debug.wfd.enable=1
+ro.oppo.screen.heteromorphism=444,0:636,76
 
 # DPM
 persist.vendor.dpm.feature=1
@@ -59,13 +97,33 @@ ro.support_one_handed_mode=true
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
 
+# Gboard
+ro.com.google.ime.kb_pad_port_l=7
+ro.com.google.ime.kb_pad_port_r=7
+ro.com.google.ime.kb_pad_land_l=14
+ro.com.google.ime.kb_pad_land_r=14
+
 # Graphics
 debug.sf.disable_backpressure=1
 debug.sf.enable_hwc_vds=1
-debug.sf.latch_unsignaled=1
+persist.demo.hdmirotationlock=false
+persist.sys.sf.color_saturation=1.0
+persist.sys.sf.native_mode=0
+ro.hwui.use_vulkan=true
+graphics.gpu.profiler.support=true
+renderthread.skia.reduceopstasksplitting=true
+debug.hwui.renderer=skiavk
+debug.cpurend.vsync=false
+
+# Iorap
+iorapd.perfetto.enable=false
+persist.device_config.runtime_native_boot.iorap_readahead_enable=false
+ro.iorapd.enable=false
+iorapd.readahead.enable=false
 
 # Media
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+ro.media.recorder-max-base-layer-fps=60
 
 # Netflix custom property
 ro.netflix.bsp_rev=Q670-14477-1
@@ -96,6 +154,12 @@ ro.telephony.default_cdma_sub=0
 ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1
 
+# Surface Flinger
+ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+ro.surface_flinger.max_virtual_display_dimension=4096
+ro.surface_flinger.protected_contents=true
+
 # Touch Improvements
 touch.pressure.scale=0.001
 persist.sys.ui.hw=1
@@ -114,3 +178,19 @@ MultitouchSettleInterval=1ms
 MultitouchMinDistance=1px
 TapInterval=1ms
 TapSlop=1px
+
+# Thermal
+persist.sys.enable.oscar=0
+persist.sys.oscar.dc=1
+
+# SSR
+persist.vendor.ssr.enable_ramdumps=0
+persist.vendor.ssr.restart_level=ALL_ENABLE
+
+# ZRAM writeback
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=1440
+ro.zram.periodic_wb_delay_hours=24
+
+# Zygote
+persist.device_config.runtime_native.usap_pool_enabled=true
