@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2022 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -297,10 +297,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.perf.scroll_opt=true
 
-# Muzix
-PRODUCT_PACKAGES += \
-    Muzix
-
 # Perfd (dummy)
 PRODUCT_PACKAGES += \
     libqti-perfd-client
@@ -447,10 +443,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
-
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.realme_sdm710
 
 # Thermal
 #PRODUCT_PACKAGES += \
